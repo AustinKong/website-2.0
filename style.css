@@ -1,0 +1,274 @@
+@font-face {
+    font-family: Graphik;
+    src: url(Resources/GraphikLight.otf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    overflow-x: hidden;
+    font-family: 'Graphik', sans-serif;
+}
+
+#landingPage {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+#landingPage img{
+    position: absolute;
+    top: 20vh;
+    left: 10vw;
+    width: 40px;
+    height: 40px;
+}
+
+#landingPage h1 {
+    font-size: 35px;
+    letter-spacing: 5px;
+    line-height: 50px;
+    padding: 35vh 10vw 10vh 10vw;
+}
+
+#landingPage .navMenu {
+    width: 50%;
+    padding: 20vh 0 0 0;
+    background-color: #4c35e3;
+}
+
+#landingPage .navMenu ul {
+    list-style: none;
+    font-size: 30px;
+    line-height: 50px;
+}
+
+#landingPage .navMenu ul a {
+    padding: 4px;
+    box-shadow: inset 0 0 0 0 #140096;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    color: rgb(0, 0, 0);
+}
+
+#landingPage .navMenu ul a:hover {
+    color: white;
+    box-shadow: inset 400px 0 0 0 #140096;
+}
+
+#landingPage .navMenu ul a:link,
+a:visited {
+    text-decoration: none;
+}
+
+
+
+
+#about {
+    width: 100vw;
+    padding: 10vh 5vw 0 5vw;
+    background-color: #FEE440;
+}
+
+#about h1 {
+    font-size: 35px;
+    letter-spacing: 5px;
+    line-height: 50px;
+    color: rgb(0, 0, 0);
+    padding-left: 2vw;
+}
+
+#about .content {
+    width: 100vw;
+    display: flex;
+    position: relative;
+}
+
+#about .content h2 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    line-height: 28px;
+    padding: 2% 6% 6% 6%;
+    width: 50%;
+}
+
+#about .content img {
+    position: absolute;
+    height: 70vh;
+    bottom: 0;
+    right: 10%;
+}
+
+#about .content a {
+    color: rgb(0, 0, 0);
+}
+
+
+
+
+
+
+
+
+
+
+#transitionInfo {
+    width: 100vw;
+    display: flex;
+    padding: 12vh 13vw 20vh 13vw;
+}
+
+#transitionInfo .column {
+    width: 50vw;
+}
+
+#transitionInfo .item {
+    margin-top: 10vh;
+
+    font-size: 17px;
+    letter-spacing: 3px;
+    line-height: 23px;
+    color: rgb(103, 103, 103);
+    text-decoration: none;
+}
+
+#transitionInfo h2 {
+    font-size: 20px;
+    letter-spacing: 6px;
+    color: rgb(141, 141, 141);
+}
+
+#transitionInfo a {
+    padding: 4px;
+    box-shadow: inset 0 0 0 0 #132931;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    color: rgb(74, 74, 74);
+}
+
+#transitionInfo a:hover {
+    box-shadow: inset 400px 0 0 0 #132931;
+    color: white;
+}
+
+#transitionInfo a:link,
+a:visited {
+    text-decoration: none;
+}
+
+
+
+.fade-in-bottom{
+    opacity: 0;
+    animation: fade-bottom 0.6s ease-in;
+    animation-fill-mode: forwards;
+}
+
+.reveal {
+    position: relative;
+    opacity: 0;
+}
+
+.reveal.active {
+    opacity: 1;
+}
+
+.active.fade-bottom {
+    animation: fade-bottom 0.4s ease-in;
+}
+
+@keyframes fade-bottom {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#projects {
+    width: 100vw;
+    padding: 10vh 5vw 15vh 5vw;
+}
+
+#projects h1 {
+    font-size: 35px;
+    letter-spacing: 5px;
+    line-height: 50px;
+    color: rgb(103, 103, 103);
+    padding-left: 2vw;
+}
+
+#projects .columnContainer {
+    display: flex;
+}
+
+#projects .column {
+    width: 28vw;
+    margin: 0 0.5vw 0 0.5vw;
+}
+
+#projects .projectItem {
+    position: relative;
+    width: 100%;
+    margin: 1vw 0 1vw 0;
+    display: flex;
+}
+
+#projects .projectItem img {
+    width: 100%;
+    display: block;
+}
+
+#projects .projectItem .overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    transition: .3s ease;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+
+    color: white;
+    font-size: 17px;
+}
+
+#projects .projectItem:hover .overlay {
+    opacity: 1;
+}
+
+#projects .projectItem .overlay span {
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    transition: .5s ease;
+    padding: 0 10% 0 10%;
+    transform: translateY(40px);
+}
+
+#projects .projectItem:hover .overlay span {
+    transform: translateY(0px);
+}
+
+#projects .projectItem .overlay span h3{
+    line-height: 0;
+    letter-spacing: 3px;
+    font-size: 23px;
+}
+
+
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0 30px 0;
+    letter-spacing: 2px;
+}
